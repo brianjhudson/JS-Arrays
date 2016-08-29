@@ -188,7 +188,13 @@ function addItem(myGroceryList, itemToAdd) {
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
+function maker() {
+  var arr = [];
+  for (var i = 1; i <= 215; i++) {
+    arr[i - 1] = i;
+  }
+  return arr;
+}
 
 
 //Next Problem
