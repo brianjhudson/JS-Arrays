@@ -206,7 +206,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 function addTen(numbers) {
-  var numsPlusTen = []
+  var numsPlusTen = [];
   for (var i = 0; i < numbers.length; i++) {
     numsPlusTen[i] = Number(numbers[i]) + 10;
   }
@@ -232,7 +232,12 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
-
+function longer(arr1, arr2) {
+  if (arr1.length >= arr2.length) {
+    return arr1;
+  }
+  return arr2;
+}
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
