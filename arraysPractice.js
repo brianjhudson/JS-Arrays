@@ -154,16 +154,20 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 function removeItem(myGroceryList, itemToRemove) {
-  var indexToRemove = -1;
-  for (var i = 0; i < myGroceryList.length; i++) {
-    if (myGroceryList[i] === itemToRemove) {
-      indexToRemove = i;
+  if (!Array.isArray(myGroceryList) || typeof itemToRemove !== 'string') {
+    return [];
+  }
+    var indexToRemove = -1;
+    for (var i = 0; i < myGroceryList.length; i++) {
+      if (myGroceryList[i] === itemToRemove) {
+        indexToRemove = i;
+      }
     }
-  }
-  if (indexToRemove !== -1) {
-    myGroceryList.splice(indexToRemove, 1);
-  }
-  return myGroceryList;
+    if (indexToRemove !== -1) {
+      myGroceryList.splice(indexToRemove, 1);
+    }
+    return myGroceryList;
+
 }
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
