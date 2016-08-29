@@ -167,7 +167,14 @@ function removeItem(myGroceryList, itemToRemove) {
       myGroceryList.splice(indexToRemove, 1);
     }
     return myGroceryList;
+}
 
+function addItem(myGroceryList, itemToAdd) {
+  if (!Array.isArray(myGroceryList) || typeof itemToAdd !== 'string') {
+    return [];
+  }
+  myGroceryList.push(itemToAdd);
+  return myGroceryList;
 }
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
